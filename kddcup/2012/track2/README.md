@@ -29,22 +29,33 @@ Moreover, the training, validation and testing data contain more information tha
 
 Finally, after including additional features, each training instance is a line consisting of fields delimited by the TAB character: 
 1. Click: as described in the above list. 
+
 2. Impression: as described in the above list. 
+
 3. DisplayURL: a property of the ad. 
    The URL is shown together with the title and description of an ad. It is usually the shortened landing page URL of the ad, but not always. In the data file,  this URL is hashed for anonymity. 
+
 4. AdID: as described in the above list. 
+
 5. AdvertiserID: a property of the ad. 
    Some advertisers consistently optimize their ads, so the title and description of their ads are more attractive than those of others' ads. 
+
 6. Depth: a property of the session, as described above.   
+
 7. Position: a property of an ad in a session, as described above. 
+
 8. QueryID:  id of the query. 
    This id is a zero‐based integer value. It is the key of the data file 'queryid_tokensid.txt'.
+
 9. KeywordID: a property of ads. 
    This is the key of  'purchasedkeyword_tokensid.txt'. 
+
 10. TitleID: a property of ads. 
     This is the key of 'titleid_tokensid.txt'. 
+
 11. DescriptionID: a property of ads. 
     This is the key of 'descriptionid_tokensid.txt'. 
+
 12. UserID 
     This is the key of 'userid_profile.txt'.  When we cannot identify the user, this field has a special value of 0.
 
@@ -52,9 +63,13 @@ ADDITIONAL DATA FILES
 ---------------------
 There are five additional data files, as mentioned in the above section: 
 1. queryid_tokensid.txt 
+
 2. purchasedkeywordid_tokensid.txt 
+
 3. titleid_tokensid.txt 
+
 4. descriptionid_tokensid.txt 
+
 5. userid_profile.txt 
 
 Each line of the first four files maps an id to a list of tokens, corresponding to the query, keyword, ad title, and ad description, respectively. In each line, a TAB character separates the id and the token set.  A token can basically be a word in a natural language. For anonymity, each token is represented by its hash value.  Tokens are delimited by the character '|'. 
